@@ -24,6 +24,7 @@ let items = [
 ];
 
 // GET request to fetch all items
+
 app.get('/api/items', (req, res) => {
   res.status(200).json({
     message: 'Fetched Data Successfully',
@@ -35,9 +36,11 @@ app.get('/api/items', (req, res) => {
 app.post('/api/items', (req, res) => {
   const { id, name } = req.body;
 
+
   // Generate a random email for the new item
   const newItem = {
     id: id || items.length + 1, // Auto-increment ID if not provided
+  
     name,
     email: generateRandomEmail(name)
   };
