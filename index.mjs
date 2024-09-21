@@ -6,7 +6,9 @@ const app = express();
 // Use JSON middleware to parse JSON bodies
 app.use(express.json());
 
+
 // Function to generate random email
+
 const generateRandomEmail = (name) => {
   const domain = ['gmail.com', 'yahoo.com', 'outlook.com', 'example.com'];
   const randomDomain = domain[Math.floor(Math.random() * domain.length)];
@@ -14,6 +16,8 @@ const generateRandomEmail = (name) => {
 };
 
 // Mock array of items with replaced names and random emails
+
+
 let items = [
   { id: 1, name: 'Ahmad', email: "ahmad@gmail.com.pk" },
   { id: 2, name: 'Asad', email: "asad@gmail.com" }
