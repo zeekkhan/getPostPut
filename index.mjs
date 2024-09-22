@@ -32,6 +32,7 @@ app.get('/api/items', (req, res) => {
   });
 });
 
+
 // POST request to add a new item
 app.post('/api/items', (req, res) => {
   const { id, name } = req.body;
