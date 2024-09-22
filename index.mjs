@@ -85,6 +85,7 @@ app.put('/api/items/:id', (req, res) => {
 app.delete('/api/items/:id', (req, res) => {
   const { id } = req.params;
 
+  
   // Find the item to delete
   const itemIndex = items.findIndex(item => item.id == id);
 
