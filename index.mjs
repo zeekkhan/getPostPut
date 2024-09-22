@@ -60,10 +60,11 @@ app.put('/api/items/:id', (req, res) => {
   const { id } = req.params;
   const { name } = req.body;
 
-  
+
   // Find the item to update
   const itemIndex = items.findIndex(item => item.id == id);
 
+  
   if (itemIndex !== -1) {
     // Update the item and regenerate the email based on the new name
     items[itemIndex] = { id: parseInt(id), name, email: generateRandomEmail(name) };
