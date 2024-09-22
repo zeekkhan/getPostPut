@@ -64,7 +64,7 @@ app.put('/api/items/:id', (req, res) => {
   // Find the item to update
   const itemIndex = items.findIndex(item => item.id == id);
 
-  
+
   if (itemIndex !== -1) {
     // Update the item and regenerate the email based on the new name
     items[itemIndex] = { id: parseInt(id), name, email: generateRandomEmail(name) };
@@ -79,6 +79,7 @@ app.put('/api/items/:id', (req, res) => {
     });
   }
 });
+
 
 // DELETE request to remove an item by ID
 app.delete('/api/items/:id', (req, res) => {
